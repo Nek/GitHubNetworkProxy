@@ -1,12 +1,8 @@
 {
   "name": "GitHubProxy",
-  "version": "0.0.1-3",
+  "version": "0.0.1",
   "description": "A simple proxy to load github network data from your own web app.",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "app.js"
-  },
   "repository": "",
   "author": "Nikita Dudnik",
   "license": "BSD",
@@ -18,6 +14,5 @@
   "engines": {
     "node": "0.8.x",
     "npm": "1.1.x"
-  },
-  "subdomain": "GitHubProxy"
+  }
 }
