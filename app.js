@@ -16,7 +16,10 @@ server = Connect.createServer(
         var query = url.parse(req.url, true).query;
         var name = query.name || "Animatron";
         var repo = query.repo || "player";
-        var rr = request('https://github.com/' + name  + '/' + repo  + '/network_data_chunk?start=0&end=500', 
+        var end = query.end || "";
+        if (end !== "") end = '&end=' + end;
+        var l = 'https://github.com/' + name  + '/' + repo  + '/network_data_chunk?start=0' + end;
+        var rr = request(l, 
                          function(err, resp, b) {});
         req.pipe(rr).pipe(res);
     }
